@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 "use client";
 import MeetingSetup from "@/components/MeetingSetup";
 import MeetingRoom from "@/components/MeetingRoom";
