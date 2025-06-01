@@ -1,4 +1,4 @@
-// @ts-nocheck
+
 
 "use client";
 import MeetingSetup from "@/components/MeetingSetup";
@@ -9,11 +9,14 @@ import { useState } from "react";
 import React from "react";
 import { useGetCallById } from "@/hooks/useGetCallById";
 import Loader from "@/components/Loader";
+import { useParams } from "next/navigation";
 
-const Meeting = ({ params }: { params: { id: string } }) => {
+
+const Meeting = () => {
+  const { id } = useParams();
   const {  isLoaded } = useUser();
   const [isSetupComplete, setIsSetupComplete] = useState(false);
-  const { call, isCallLoading } = useGetCallById(params.id);
+  const { call, isCallLoading } = useGetCallById(id!);
 
   if (!isLoaded || isCallLoading) return <Loader />;
 
