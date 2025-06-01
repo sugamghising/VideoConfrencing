@@ -6,13 +6,12 @@ import {
   PaginatedGridLayout,
 } from "@stream-io/video-react-sdk";
 import { SpeakerLayout } from "@stream-io/video-react-sdk";
-import React, { use } from "react";
+import React from "react";
 import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";

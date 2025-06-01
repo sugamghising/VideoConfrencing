@@ -4,11 +4,8 @@ import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 
 interface MeetingModalProps {
   isOpen: boolean;
@@ -43,7 +40,7 @@ const MeetingModal = ({
               <Image  src={image} width={72} height={72} alt="add-meeting"/>
             </div>
           )}
-          <h1 className="cn('text-2xl font-bold leading-[42px]',className)">{title}</h1>
+          <h1 className={cn("text-3xl font-bold leading-[42px]", className)}>{title}</h1>
           {children}
           <Button className="blueBackground focus-visible:ring-0 focus-visible:ring-offset-0" onClick={handleClick}>
             {buttonIcon &&(
