@@ -30,7 +30,7 @@ const MobileNav = () => {
         <SheetContent side="left" className=" border-none bg-slate-300">
           <Link href='/' className='flex items-center gap-1'>
         <Image
-          src='/icons/logo.svg'
+          src='/icons/logo.png'
           alt="Logo of the application"
           width={32}
           height={32}

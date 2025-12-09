@@ -80,7 +80,7 @@ const CallList = ({type}:{type: 'ended' |'upcoming'|'recordings'}) => {
                 ? '/icons/previous.svg'
                 :type === 'upcoming'
                 ?'icons/upcoming.svg'
-                :'/icons/recording.svg'
+                :'/icons/recordings.svg'
               }
               title={(meeting as Call).state?.custom?.description?.substring(0,20)||'Personal Meeting'}
               date={

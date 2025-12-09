@@ -30,17 +30,16 @@ const PersonalRoom = () => {
   const client = useStreamVideoClient();
   const router = useRouter();
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${meetingId}?personal=true`;
-  const {call} = useGetCallById(meetingId!);
+  const { call } = useGetCallById(meetingId!);
   const startRoom = async () => {
-    if(!client || !user) return;
-    if(!call){
-      const newCall = client.call("default", meetingId!);
-      
+    if (!client || !user) return;
+    const newCall = client.call("default", meetingId!);
+    if (!call) {
       await newCall.getOrCreate({
-          data: {
-            starts_at: new Date().toISOString(),
-          },
-        });
+        data: {
+          starts_at: new Date().toISOString(),
+        },
+      });
     }
     router.push(`/meeting/${meetingId}?personal=true`);
   };

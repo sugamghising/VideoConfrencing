@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className='flex justify-between items-center fixed z-50 w-full bg-slate-300 px-6 py-4 lg:px-10'>
       <Link href='/' className='flex items-center gap-1'>
         <Image
-          src='/icons/logo.svg'
+          src='/icons/logo.png'
           alt="Logo of the application"
           width={32}
           height={32}
@@ -22,10 +22,17 @@ const Navbar = () => {
       </Link>
 
 
-      <div className=" flex justify-between items-center gap-5">
-        <SignedIn>
-          <UserButton />
-        </SignedIn>     
+      <div className=" flex justify-between items-center gap-5 text-gray-950">
+        <SignedIn 
+        >
+          <UserButton appearance={
+            {
+              elements:{
+                userButtonPopoverActionButton : 'text-grey-950',
+              }
+            }
+          }/>
+        </SignedIn >     
         <MobileNav />
       </div>
     </nav>

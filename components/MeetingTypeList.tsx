@@ -12,12 +12,13 @@ import { Textarea } from "@/components/ui/textarea";
 import ReactDatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Input } from "./ui/input";
+import Loader from "./Loader";
 
 const MeetingTypeList = () => {
   const router = useRouter();
   const [meetingState, setMeetingState] = useState<
     "isScheduleMeeting" | "isJoiningMeeting" | "isInstantMeeting" | undefined
-  >();
+  >(undefined);
 
   const { user } = useUser();
   const client = useStreamVideoClient();
@@ -66,6 +67,8 @@ const MeetingTypeList = () => {
     }
   };
 
+
+  if(!client || !user) return <Loader />
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`
 
 
@@ -103,7 +106,7 @@ const MeetingTypeList = () => {
         title="Join Meeting"
         description="Join a meeting with a link."
         handleClick={() => {
-          router.push("/recordings");
+          setMeetingState("isJoiningMeeting");
         }}
         className="yellowBackground"
       />

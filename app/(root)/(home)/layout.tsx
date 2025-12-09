@@ -1,16 +1,16 @@
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
-import React from 'react'
+import  { ReactNode } from 'react'
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "VOOOM ",
   description: "Video Conferencing App",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/logo.png",
   }
 };
-const HomeLayout = ({children} : {children: React.ReactNode}) => {
+const HomeLayout = ({children} :  Readonly<{children : ReactNode}>) => {
   return (
     <main className='relative'>
         <Navbar/>

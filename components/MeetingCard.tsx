@@ -24,7 +24,7 @@ const MeetingCard = ({icon,title,date,isPreviousMeeting,buttonIcon1,handleClick,
 
     
   return (
-    <section className="flex min-h-[250px] w-full flex-col justify-between rounded-between rounded-[14px] bg-slate-300 px-5 py-8 xl:max-w-[568px]">
+    <section className="flex min-h-[250px] w-full flex-col justify-between rounded-[14px] bg-slate-300 px-5 py-8 xl:max-w-[568px]">
         <article className="flex flex-col gap-5">
             <Image src ={icon} alt='upcoming' width={28} height={28}/>
             <div className="flex justify-between">

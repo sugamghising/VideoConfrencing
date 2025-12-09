@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: "VOOOM ",
   description: "Video Conferencing App",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/logo.png",
   }
 };
 
@@ -32,13 +32,14 @@ export default function RootLayout({
     <html lang="en">
       <ClerkProvider 
       appearance={{
+        
         layout:{
-          logoImageUrl:'/icons/yoom-logo.svg',
+          logoImageUrl:'/icons/vooomLogo.png',
           socialButtonsVariant: 'iconButton'
         },
         variables:{
-          colorText: "#000",
-          colorPrimary: "#0070f3",
+          colorText: "black",
+          colorPrimary: "blue",
           colorBackground: "#fff",
         }
       }}
